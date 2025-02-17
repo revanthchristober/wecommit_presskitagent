@@ -1,0 +1,23 @@
+[project]
+name = "wecommit_presskitagent"
+version = "0.1.0"
+description = "wecommit-presskitagent using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.102.0,<1.0.0"
+]
+
+[project.scripts]
+wecommit_presskitagent = "wecommit_presskitagent.main:run"
+run_crew = "wecommit_presskitagent.main:run"
+train = "wecommit_presskitagent.main:train"
+replay = "wecommit_presskitagent.main:replay"
+test = "wecommit_presskitagent.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"

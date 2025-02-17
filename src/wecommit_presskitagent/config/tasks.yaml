@@ -1,0 +1,38 @@
+generate_intial_presskit_draft:
+  description: >
+    Create an initial press kit draft using the following inputs:
+
+    Company Information: {company_info}
+    Press Kit Topic: {topic}
+    Desired Tone/Style: {style}
+
+    Ensure that the content is engaging, clear, and informative.
+    Use the most recent data available.
+
+  expected_output: >
+    A complete initial press kit draft including company overview, press release, PR message, and email draft.
+  
+  agent: presskit_content_generator
+
+  output_format: presskit_draft.pdf
+
+review_optimize_presskit_draft:
+  description: >
+    Review the provided press kit draft and optimize it.
+
+    Focus on:
+    - Content Consistency
+    - Writing Style and Tone
+    - Layout and Structure
+    - SEO Optimization
+
+
+    Provide actionable feedback and make recommendations for improvement.
+    Input Draft would be provided From the previous task.
+
+  expected_output: >
+    A quality review report with scores and detailed feedback for each aspect of the press kit.
+
+  agent: presskit_quality_review_optimization_agent
+
+  output_format: presskit_review_report.pdf
